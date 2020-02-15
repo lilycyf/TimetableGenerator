@@ -58,7 +58,7 @@ courseList = {"CPSC420": [[(1,13,14),(3,13,14),(5,13,14)],[(2,14.5,15),(4,14.5,1
 courseList["CPSC322"] = [[(1,13,14),(3,13,14),(5,13,14)],[(1,14,15),(3,14,15),(5,14,15)]]
 courseList["COGS300"] = [[(1,15,16),(3,15,16)]]
 
-timetable = timetableGenerator(courseList, 14, 15)
+timetable = timetableGenerator(courseList, 14, 16)
 
 print(timetable)
 
