@@ -1,6 +1,5 @@
 
 
-
 def timetableGenerator(dict, after, before):
     
     timetables = []
@@ -59,11 +58,11 @@ courseList = {}
 courseList = {"CPSC420": [[(1,13,14),(3,13,14),(5,13,14)],[(2,14.5,15),(4,14.5,15)]]}
 courseList["CPSC322"] = [[(1,13,14),(3,13,14),(5,13,14)],[(1,14,15),(3,14,15),(5,14,15)]]
 courseList["COGS300"] = [[(1,15,16),(3,15,16)]]
+print(courseList)
 
 timetable = timetableGenerator(courseList, 14, 16)
 
-print(timetable)
-
+# print(timetable)
 
 
 
