@@ -1,4 +1,6 @@
 
+
+
 def timetableGenerator(dict, after, before):
     
     timetables = []
