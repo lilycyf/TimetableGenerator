@@ -1,5 +1,6 @@
 import infoGetter
 
+MAX_CREDITS_PER_TERM = 15
 
 def timetableGenerator(dict, after, before, ignore):
     
@@ -62,7 +63,7 @@ def checkNewAddedItem(x):
     for i in range(0, len(x)-1):
         if(x[i][1].get("Term") == term):
             credits = credits + x[i][1].get("Credits")
-    if credits > 18: return False
+    if credits > MAX_CREDITS_PER_TERM: return False
     for i in range(0, len(x)-1):
         if(not checkTwoClasses(x[i], x[-1])):
             return False
@@ -94,14 +95,15 @@ infoGetter.reformate(courses)
 ignore = []
 ignore.extend(["Tutorial", "Laboratory"])
 
-timetable = timetableGenerator(courses, 11, 16, ignore)
+timetable = timetableGenerator(courses, 11, 24, ignore)
 
 for tt in timetable:
     for t in tt:
-        if "Reformate" in t[1]:
-            del t[1]["Reformate"]
+        # if "Reformate" in t[1]:
+        #     del t[1]["Reformate"]
         print(t)
     print("---------------------------------------------")
+
 
 
 
